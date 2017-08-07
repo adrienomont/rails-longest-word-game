@@ -1,0 +1,16 @@
+  <% start_time = Time.now %>
+<div class="container text-center">
+  <h1 class ='title'>Grid:</h1>
+
+
+  <p>Grid: <%= @grid %></p>
+
+  <h1 class ='title'>Write your word:</h1>
+
+  <form action="/score" method="get">
+    <input type="hidden" name="start" value="<%= start_time %>">
+    <input type="text" name="query" placeholder="Word">
+    <input type="submit" class="btn btn-warning">
+    <input type="hidden" name="end_time" value="<%= Time.now %>">
+  </form>
+</div>
